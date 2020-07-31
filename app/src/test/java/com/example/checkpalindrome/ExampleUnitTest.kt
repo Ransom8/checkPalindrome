@@ -20,11 +20,11 @@ class ExampleUnitTest {
     }
     @Test
     fun check_blank() {
-        assertEquals(checkPalindrome(""), false)
+        assertEquals(checkPalindrome(""), true)
     }
     @Test
     fun check_space() {
-        assertEquals(checkPalindrome("  "), false)
+        assertEquals(checkPalindrome("  "), true)
     }
     @Test
     fun check_non_string() {
@@ -36,6 +36,10 @@ class ExampleUnitTest {
     }
     @Test
     fun check_non_mixed_types() {
-        assertEquals(checkPalindrome("Oh! how are you"), false)
+        assertEquals(checkPalindrome("Oh! how are you?"), false)
+    }
+    @Test
+    fun check_non_palindrome() {
+        assertEquals(checkPalindrome("wikipedia"), false)
     }
 }

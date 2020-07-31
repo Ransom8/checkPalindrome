@@ -21,7 +21,7 @@ fun checkPalindrome(input: String): Boolean {
 */
 
     return if (input.isBlank()) {
-        false
+        true
     } else if (!input.matches("^[a-z]*$".toRegex())) {
         false
     } else {
